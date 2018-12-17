@@ -1,16 +1,7 @@
-# ⚛️ gatsby-starter-modern
-
-A modern Gatsby starter with strict linting and auto-formatting rules.
-
-## 🚀 Getting started
-
-- Clone this project and install all the required dependencies _(e.g. with `gatsby new gatsby-example-site https://github.com/kripod/gatsby-starter-modern` after making sure that Gatsby CLI is installed globally with `npm install --global gatsby-cli`)_
 - Start a development server with `yarn develop` or `npm run develop`
   - _Other scripts like `build`, [`format`](#automatic-code-formatting) and [`lint`](#linting) are also available_
 
-### Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kripod/gatsby-starter-modern)
+- This project was started from [Gatsby Starter Modern](https://github.com/kripod/gatsby-starter-modern)
 
 ## 💅 Style management
 
@@ -20,7 +11,7 @@ A modern Gatsby starter with strict linting and auto-formatting rules.
 [styled-components]: https://www.styled-components.com/
 [styled-system]: https://jxnblk.com/styled-system/
 
-## ✨ Developer experience
+## Developer experience
 
 ### Automatic code formatting
 
@@ -30,8 +21,6 @@ A modern Gatsby starter with strict linting and auto-formatting rules.
 [stop all the on-going debates over coding styles]: https://prettier.io/docs/en/why-prettier.html
 
 ### Linting
-
-[Linters][lint] are tools that analyze source code to flag programming errors, bugs, stylistic errors, and suspicious constructs.
 
 - JavaScript is linted by [ESLint][], enforcing the [Airbnb JavaScript Style Guide][] through an overridable set of rules provided by [eslint-config-airbnb-base][].
 - Styles are linted by [stylelint][], adhering to the rules specified in [stylelint-config-recommended][].
