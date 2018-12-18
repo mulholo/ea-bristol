@@ -2,20 +2,28 @@ import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Box, Flex, Heading, Provider as RebassProvider, Text } from 'rebass';
-import { injectGlobal } from 'styled-components';
-import Footer from './Footer';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Header from './Header';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     text-size-adjust: 100%;
-  }
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+`;
+
+const theme = {
+  eaBlue: '#0c869b',
+  maxWidth: 720,
+};
+
+const LayoutContainer = styled.div`
+  max-width: ${props => props.theme.maxWidth}px;
+  margin: auto;
 `;
 
 const Layout = ({ children }) => (
-  <RebassProvider is={Flex} flexDirection="column" css={{ minHeight: '100vh' }}>
+  <React.Fragment>
     <StaticQuery
       query={graphql`
         {
@@ -36,17 +44,15 @@ const Layout = ({ children }) => (
         </Helmet>
       )}
     />
-
-    <Header brand={<Heading>Gatsby</Heading>} />
-
-    <Box is="main" flex={1}>
-      {children}
-    </Box>
-
-    <Footer>
-      <Text align="center">Sticky footer</Text>
-    </Footer>
-  </RebassProvider>
+    <ThemeProvider theme={theme}>
+      <LayoutContainer>
+        <GlobalStyle />
+        <Header brand={<h1>EA Bristol</h1>} />
+        {children}
+      </LayoutContainer>
+      {/* Footer */}
+    </ThemeProvider>
+  </React.Fragment>
 );
 
 Layout.propTypes = {

@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Modern Starter',
+    title: 'Effective Alturism Bristol',
     language: 'en',
   },
-  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-styled-components'],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+    'gatsby-mdx',
+  ],
 };
