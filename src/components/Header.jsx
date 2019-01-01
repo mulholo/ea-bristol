@@ -11,19 +11,21 @@ const HeaderStyles = styled.div`
 
   div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: ${props => props.theme.maxWidth}px;
+    max-width: ${props => props.theme.maxWidth}px;
     margin: 0 auto;
+    padding: 0 16px;
     align-items: center;
   }
 
   h1 {
-    padding: 16px 0;
+    padding: 16px 32px 16px 0;
     margin: 0;
   }
 
   h2 {
-    padding: 0;
+    padding: 16px 0;
     margin: 0;
     font-weight: 400;
   }

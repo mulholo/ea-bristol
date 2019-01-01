@@ -20,12 +20,13 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   eaBlue: '#0c869b',
-  maxWidth: 720,
+  maxWidth: 736,
 };
 
 const LayoutContainer = styled.div`
   max-width: ${props => props.theme.maxWidth}px;
   margin: auto;
+  padding: 0 16px;
 `;
 
 const Layout = ({ children }) => (
