@@ -10,6 +10,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     text-size-adjust: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  p, li {
+    line-height: 1.5;
+    font-size: 18px;
+  }
 `;
 
 const theme = {
@@ -45,12 +51,14 @@ const Layout = ({ children }) => (
       )}
     />
     <ThemeProvider theme={theme}>
-      <LayoutContainer>
-        <GlobalStyle />
-        <Header brand={<h1>EA Bristol</h1>} />
-        {children}
-      </LayoutContainer>
-      {/* Footer */}
+      <React.Fragment>
+        <Header title="EA Bristol" subtitle="Doing the Most Good We Can" />
+        <LayoutContainer>
+          <GlobalStyle />
+          {children}
+        </LayoutContainer>
+        {/* Footer */}
+      </React.Fragment>
     </ThemeProvider>
   </React.Fragment>
 );
