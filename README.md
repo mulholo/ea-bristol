@@ -1,15 +1,20 @@
-- Start a development server with `yarn develop` or `npm run develop`
+# Effective Alturism Bristol
+
+This is a small, informational site for the EA community in Bristol. You can find it at EABristol.com.
+
+## Usage
+- Start a development server with `yarn dev`
   - _Other scripts like `build`, [`format`](#automatic-code-formatting) and [`lint`](#linting) are also available_
+
+## Making Changes
+- This site is hosted on [Netlify](https://netlify.com). That means that all you have to do to update the site is push to master and your changes will be deployed automatically.
+- If you want to update content, this site uses [MDX](https://mdxjs.com), a kind of Markdown that lets you write JSX too. For the most part, you can ignore this and just write normal markdown in the `content/` folder. Any new files in this folder will automatically generate a new component which can then be imported to a page. See `index.mdx` and `index.jsx` for an example.
 
 - This project was started from [Gatsby Starter Modern](https://github.com/kripod/gatsby-starter-modern)
 
-## 💅 Style management
+### 💅 Style management
 
-[Rebass][], a React UI component library & design system, is used for styling components. Based on [styled-components][] and [styled-system][], it provides a delightful way for managing styles.
-
-[rebass]: https://jxnblk.com/rebass/
 [styled-components]: https://www.styled-components.com/
-[styled-system]: https://jxnblk.com/styled-system/
 
 ## Developer experience
 
